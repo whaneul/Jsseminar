@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #todoname{
+            margin-left: 32px;
+        }
+    </style>
+    
+</head>
+<body>
+    <p>
+        이름: <input type="text" id="todoname" />
+        <br>
+        전화번호: <input type="tel" id="todotel" />
+        <br>
+        <button onclick="add()">입력</button>
+    </p>
+    <ul id="list">
+    
+    </ul>
+    
+    </body>
+    
+    <script>
+    
+        const todolist = []
+    
+        const add = () => {
+    
+    
+            const nameinput = document.querySelector("#todoname");
+            const telinput = document.querySelector("#todotel")
+            const todo = `<li id="${todolist.length}" onClick=del(${todolist.length})>이름: ${nameinput.value}</li><li>전화번호: ${telinput.value}</li>`;
+    
+            todolist.push(todo);
+            const list = document.querySelector("#list");
+    
+            list.innerHTML += todo;
+    
+            input.value = ' '; 
+        };
+    
+    
+    
+    </script>
+</html>
+
