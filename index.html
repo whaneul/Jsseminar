@@ -1,0 +1,32 @@
+<body>
+<p>Todo: <input type="text" id="todo" /> <button onclick="add()">입력</button></p>
+<ul id="list">
+
+</ul>
+
+</body>
+
+<script>
+
+    const todolist = []
+
+    const add = () => {
+
+
+        const input = document.querySelector("#todo");
+        const todo = `<li id="${todolist.length}" onClick=del(${todolist.length})>${input.value}</li>`;
+
+        todolist.push(todo);
+
+        const list = document.querySelector("#list");
+
+        list.innerHTML += todo;
+
+        input.value = ' '; 
+        
+        
+    };
+
+
+
+</script>
